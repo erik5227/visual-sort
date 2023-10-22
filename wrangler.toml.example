@@ -1,0 +1,9 @@
+name = "visual-sort"
+account_id = "<cloudflare_account_id>"
+
+main = "./.cloudflare/worker.js"
+site.bucket = "./.cloudflare/public"
+
+build.command = "npm run build"
+
+compatibility_date = "2023-10-22"
