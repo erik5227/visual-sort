@@ -1,5 +1,4 @@
 name = "visual-sort"
-account_id = "<cloudflare_account_id>"
 
 main = "./.cloudflare/worker.js"
 site.bucket = "./.cloudflare/public"
