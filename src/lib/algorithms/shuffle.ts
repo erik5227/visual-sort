@@ -11,7 +11,7 @@ export async function shuffle(arrayLength: number, quiet = false) {
 	for (let i = arrayLength - 1; i >= 0; --i) {
 		const j = range(0, i);
 
-		quiet || await sleep(1000 / arrayLength);
+		quiet || (await sleep(1000 / arrayLength));
 
 		[$array[i], $array[j]] = [$array[j], $array[i]];
 
