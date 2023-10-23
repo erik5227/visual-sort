@@ -7,17 +7,17 @@ array.subscribe((val) => {
 	$array = val;
 });
 
-export async function shuffle(arrayLength: number) {
+export async function shuffle(arrayLength: number, quiet = false) {
 	for (let i = arrayLength - 1; i >= 0; --i) {
 		const j = range(0, i);
 
-		await sleep(1000 / arrayLength);
+		quiet || (await sleep(1000 / arrayLength));
 
 		[$array[i], $array[j]] = [$array[j], $array[i]];
 
-		pointers.set([i, j]);
-		array.set($array);
+		quiet || pointers.set([i, j]);
+		quiet || array.set($array);
 	}
 
-	pointers.set([]);
+	quiet || pointers.set([]);
 }

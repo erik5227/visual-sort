@@ -21,10 +21,14 @@
 		if ($array.length !== arrayLength && !arrayLock) {
 			arrayLock = true;
 
+			let wasArraySorted = isSorted();
+
 			$array = [];
 			for (let i = 1; i <= arrayLength; ++i) {
 				$array.push(i);
 			}
+
+			wasArraySorted || shuffle(arrayLength, true);
 
 			arrayLock = false;
 		}
