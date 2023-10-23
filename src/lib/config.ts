@@ -3,6 +3,6 @@ export default {
 		stepDelay: 1 / 4
 	},
 	quicksort: {
-		stepDelay: 20
+		stepDelay: 12
 	}
 };
