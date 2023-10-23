@@ -6,4 +6,4 @@ site.bucket = "./.cloudflare/public"
 
 build.command = "npm run build"
 
-compatibility_date = "2023-10-22"
+compatibility_date = "2023-10-23"

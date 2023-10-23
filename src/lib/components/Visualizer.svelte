@@ -1,6 +1,5 @@
 <script lang="ts">
-	export let array: Array<number>;
-	export let pointers: Array<number>;
+	import { array, pointers } from '$lib/store';
 
 	function enumerate(arr: Array<number>): Array<Array<number>> {
 		let enumerated_array = [];
@@ -12,9 +11,9 @@
 </script>
 
 <div class="wrapper">
-	{#each enumerate(array) as [i, column]}
+	{#each enumerate($array) as [i, column]}
 		<div
-			class={pointers.indexOf(i) != -1 ? 'column pointer' : 'column'}
+			class={$pointers.indexOf(i) != -1 ? 'column pointer' : 'column'}
 			style="height: {column * 3}px;"
 		/>
 	{/each}

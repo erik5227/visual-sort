@@ -2,7 +2,11 @@
 	import { createEventDispatcher } from 'svelte';
 
 	let algorithm: string;
+	let enteredArrayLength: number = 40;
 	export let arrayLength: number = 40;
+	export let arrayLock: boolean;
+
+	$: !arrayLock ? (enteredArrayLength = arrayLength) : (arrayLength = enteredArrayLength);
 
 	const dispatch = createEventDispatcher();
 
